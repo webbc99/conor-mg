@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conor|MG</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- NAVBAR STARTS -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <%= link_to 'Conor|MG', root_path, :class => 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Follow Me
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><%= image_tag 'Twitter_Social_Icon_Circle_Color.png', :class => 'social_logo' %> Twitter</a>
+              <a class="dropdown-item" href="#"><%= image_tag 'flogo_RGB_HEX-72.png', :class => 'social_logo' %> Facebook</a>
+              <a class="dropdown-item" href="#"><%= image_tag 'youtube_social_icon_red.png', :class => 'social_logo' %> YouTube</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><%= image_tag 'GitHub-Mark-Light-32px.png', :class => 'social_logo' %> GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- NAVBAR ENDS -->
+    <%= yield %>
+  </body>
+</html>
