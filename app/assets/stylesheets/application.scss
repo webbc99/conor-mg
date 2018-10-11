@@ -8,10 +8,14 @@
   text-align: left;
 }
 
-#unity_logo {
-  height: 100% !important;
+.card img {
+  object-fit: contain;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.card {
+  height: 225px !important;
 }
 
 .footer {
