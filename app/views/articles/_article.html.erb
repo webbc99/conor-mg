@@ -1,21 +1,24 @@
 <% obj.each do |article| %>
   <div>
-    <h4><%= link_to article.title, article_path(article) %></h4>
+    <h3><%= link_to article.title, article_path(article), :class => "text-dark" %></h3>
   </div>
   <div>
-    <%= truncate(article.content, length: 100) %>
+    <%= truncate(article.content, length: 350) %>
   </div>
   <div>
+    <hr>
     <small>
       <p>
-        Created as <%= article.created_at.strftime("%H:%M %Z") %> on <%= article.created_at.strftime("%d/%m/%Y") %>
+        Created at <%= article.created_at.strftime("%H:%M %Z") %> on <%= article.created_at.strftime("%d/%m/%Y") %>
       </p>
     </small>
   </div>
   <div>
     <% if user_signed_in? %>
-      <%= link_to 'Edit', edit_article_path(article) %>
-      <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_article_path(article), :class => "text-dark" %> | 
+      <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, :class => "text-dark" %>
     <% end %>
   </div>
+  <br>
+  <br>
 <% end %>

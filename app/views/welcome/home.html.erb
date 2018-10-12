@@ -27,13 +27,13 @@
       <div class="card flex-md-row mb-4 shadow-sm h-md-250">
         <div class="card-body d-flex flex-column align-items-start">
           <h3 class="mb-0">
-            <a class="text-dark" href="#"><%= @article.title %></a>
+            <%= link_to "#{@article.title}", @article, :class => "text-dark" %>
           </h3>
           <div class="mb-1 text-muted"><%= @article.created_at.strftime("%H:%M %Z") %> on <%= @article.created_at.strftime("%d/%m/%Y") %></div>
-          <p class="card-text mb-auto"><%= truncate(@article.content, length: 100) %></p>
+          <p class="card-text mb-auto"><%= truncate(@article.content, length: 200) %></p>
           <p><%= link_to 'Read more...', @article %></p>
         </div>
-        <img class="card-img-right flex-auto d-none d-lg-block" id="unity_logo" data-src="holder.js/200x250?theme=thumb" alt="Unity Logo" style="width: 200px; height: 225px;" src="Unity_Logo.jpg" data-holder-rendered="true">
+        <!-- <img class="card-img-right flex-auto d-none d-lg-block" id="unity_logo" data-src="holder.js/200x250?theme=thumb" alt="Unity Logo" style="width: 200px; height: 225px;" src="Unity_Logo.jpg" data-holder-rendered="true"> -->
       </div>
     </div>
   </div>

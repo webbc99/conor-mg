@@ -1,7 +1,17 @@
-<% if user_signed_in? %>
-  <%= link_to 'New Article', new_article_path %>
-<% end %>
-<div>
-  <h2>Articles</h2>
+<div class=jumbotron>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1>Game Dev Stories</h1>
+        <h5>A blog from an aspiring game developer</h5>
+      </div>
+    </div>
+  </div>
 </div>
-<%= render 'article', obj: @articles.order(created_at: :desc) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <%= render 'article', obj: @articles.order(created_at: :desc) %>
+    </div>
+  </div>
+</div>

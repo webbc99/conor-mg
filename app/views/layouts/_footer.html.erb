@@ -1,5 +1,16 @@
 <footer class="footer">
   <div class="container">
-    <span class="text-muted">Website design by Chris Webb &copy;<%= Time.now.year %></span>
+    <div class="row">
+      <div class="col-sm-11">
+        <span class="text-muted">Website design by <%= link_to 'Chris Webb', 'https://chris-webb.herokuapp.com/' %> &copy;<%= Time.now.year %></span>
+      </div>
+      <div class="col-sm-1">
+        <% if user_signed_in? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, :class => "text-muted" %>
+        <% else %>
+          <%= link_to 'Admin', user_session_path, :class => "text-muted" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </footer>
