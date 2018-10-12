@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <%= link_to 'New Article', new_article_path %>
+<% end %>
+<div>
+  <h2>Articles</h2>
+</div>
+<%= render 'article', obj: @articles.order(created_at: :desc) %>

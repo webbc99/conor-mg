@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Bootstrap for styling
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+# Use devise for users
+gem 'devise'
 
 
 # Reduces boot times through caching; required in config/boot.rb
