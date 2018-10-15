@@ -2,7 +2,7 @@
   <div>
     <h3><%= link_to article.title, article_path(article), :class => "text-dark" %></h3>
   </div>
-  <div>
+  <div id="index_page_article_preview">
     <%= truncate(article.content, length: 350) %>
   </div>
   <div>
