@@ -21,6 +21,10 @@ class ArticlesController < ApplicationController
   def edit
   end
 
+  def upload
+    @article.upload = Article.upload
+  end
+
   def create
     @article = Article.new(article_params)
 
@@ -62,7 +66,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :content)
+    params.require(:article).permit(:title, :content, :upload)
   end
 
 end

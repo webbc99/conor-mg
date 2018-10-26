@@ -35,7 +35,12 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 # Use devise for users
 gem 'devise'
-
+# Use amazon s3 for image hostijng
+gem 'aws-sdk', '< 3.0'
+# Use paperclip for file management
+gem 'paperclip', '~> 5.3.0'
+# Use figaro for env variables
+gem 'figaro'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
