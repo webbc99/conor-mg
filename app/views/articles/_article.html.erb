@@ -1,25 +1,36 @@
 <% obj.each do |article| %>
-  <div>
-    <h3><%= link_to article.title, article_path(article), :class => "text-dark" %></h3>
-  </div>
   <% if article.upload_file_name %>
-    <%= image_tag article.upload.url(:thumb) %>
+    <div>
+      <h3><%= link_to article.title, article_path(article), :class => "text-dark" %></h3>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div id="index_page_article_preview"><%= truncate(article.content, length: 350) %></div>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag article.upload.url(:medium), :id => "article_image_index_view" %>
+      </div>
+    </div>
+  <% else %>
+    <div>
+      <h3><%= link_to article.title, article_path(article), :class => "text-dark" %></h3>
+    </div>
+    <div id="index_page_article_preview"><%= truncate(article.content, length: 350) %></div>
   <% end %>
-  <div id="index_page_article_preview"><%= truncate(article.content, length: 350) %></div>
-  <div>
-    <hr>
-    <small>
-      <p>
-        Created at <%= article.created_at.strftime("%H:%M %Z") %> on <%= article.created_at.strftime("%d/%m/%Y") %>
-      </p>
-    </small>
-  </div>
-  <div>
-    <% if user_signed_in? %>
-      <%= link_to 'Edit', edit_article_path(article), :class => "text-dark" %> | 
-      <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, :class => "text-dark" %>
-    <% end %>
-  </div>
-  <br>
+    <div>
+      <hr>
+      <small>
+        <p>
+          Created at <%= article.created_at.strftime("%H:%M %Z") %> on <%= article.created_at.strftime("%d/%m/%Y") %>
+        </p>
+      </small>
+    </div>
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_article_path(article), :class => "text-dark" %> | 
+        <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, :class => "text-dark" %>
+      <% end %>
+    </div>
+    <br>
   <br>
 <% end %>

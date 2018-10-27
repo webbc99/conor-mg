@@ -1,19 +1,31 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-11 offset-md-1">
+      <div class="col-md-10 offset-md-1">
         <h1 class="display-3"><%= @article.title %></h1>
       </div>
     </div>
   </div>
 </div>
 <div class="container">
+  <% if @article.upload_file_name %>
+    <div class="row">
+      <div class="col-md-7 offset-md-1">
+        <div class="article_content"><%= @article.content %></div>
+      </div>
+      <div class="col-md-3">
+        <%= image_tag @article.upload.url(:medium), :id => "article_image_show_view" %>
+      </div>
+    </div>
+  <% else %>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="article_content"><%= @article.content %></div>
+      </div>
+    </div>
+  <% end %>
   <div class="row">
-    <div class="col-md-11 offset-md-1">
-      <div class="article_content"><%= @article.content %></div>
-      <% if @article.upload_file_name %>
-        <%= image_tag @article.upload.url(:medium) %>
-      <% end %>
+    <div class="col-md-10 offset-md-1">
       <hr>
       <small>
         <p>

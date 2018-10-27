@@ -15,6 +15,7 @@ body {
 
 .card-img-right {
   object-fit: contain;
+  border-radius: 3px;
   width: 200px !important;
   height: 225px !important;
 }
@@ -43,4 +44,12 @@ body {
 
 #index_page_article_preview {
   white-space: pre-line;
+}
+
+#article_image_show_view {
+  border-radius: 5px;
+}
+
+#article_image_index_view {
+  border-radius: 5px;
 }
