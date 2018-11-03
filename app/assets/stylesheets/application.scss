@@ -5,12 +5,22 @@ body {
   margin-bottom: 100px;
 }
 
+.jumbotron {
+  background: linear-gradient(to left, transparent, grey), url("level_1_start.png");
+  background-size: cover;
+}
+
 .social_logo {
   height: 0.8em;
 }
 
 .social_text {
   text-align: left;
+}
+
+.carousel-image {
+  border-radius: 5px;
+  height: 500px;
 }
 
 .card-img-right {
