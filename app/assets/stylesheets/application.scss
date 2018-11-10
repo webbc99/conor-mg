@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "portfolio";
 
 body {
   padding-top: 50px;
@@ -13,7 +14,7 @@ body {
 }
 
 .jumbotron-small {
-  height: 16em !important;
+  height: 18em !important;
 }
 
 .social_logo {
@@ -26,7 +27,8 @@ body {
 
 .carousel-image {
   border-radius: 5px;
-  height: 500px;
+  height: 32em;
+  object-fit: cover;
 }
 
 .card-img-right {
