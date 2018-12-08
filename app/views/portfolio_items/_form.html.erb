@@ -1,0 +1,31 @@
+<%= form_with(model: portfolio_item, local: true, multipart: true) do |form| %>
+  <% if portfolio_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(portfolio_item.errors.count, "error") %> prevented this article from being saved:</h2>
+      <ul>
+        <%= portfolio_item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :portfolio_item_title, :required => true, :class => "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :portfolio_item_content, :class => "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :upload %>
+    <%= form.file_field :upload, :required => true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", :class => "btn btn-dark" %>
+  </div>
+<% end %>

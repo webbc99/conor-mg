@@ -1,0 +1,41 @@
+<div class="jumbotron jumbotron-small">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <h1 class="display-3 text-light"><%= @portfolio_item.title %></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <% if @portfolio_item.upload_file_name %>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="portfolio_item_content"><%= @portfolio_item.content %></div>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag @portfolio_item.upload.url(:medium), :id => "portfolio_item_image_show_view" %>
+      </div>
+    </div>
+  <% else %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="portfolio_item_content"><%= @portfolio_item.content %></div>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+      <small>
+        <p>
+          Created at <%= @portfolio_item.created_at.strftime("%H:%M %Z") %> on <%= @portfolio_item.created_at.strftime("%d/%m/%Y") %>
+        </p>
+      </small>
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item), :class => "text-dark" %> | 
+      <% end %>
+      <%= link_to 'Back', portfolio_path, :class => "text-dark" %>
+    </div>
+  </div>
+</div>

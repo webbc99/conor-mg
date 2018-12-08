@@ -13,6 +13,11 @@
         <% end %>
       </li>
       <li class="nav-item">
+        <% if user_signed_in? %>
+          <%= link_to 'New Portfolio Item', new_portfolio_item_path, :class => "nav-link" %>
+        <% end %>
+      </li>
+      <li class="nav-item">
         <%= link_to "My CV", download_cv_path, :data => { :confirm => "Download my CV?" }, :class => "nav-link" %>
       </li>
       <li class="nav-item">
