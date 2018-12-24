@@ -11,7 +11,7 @@
   <% if @article.upload_file_name %>
     <div class="row">
       <div class="col-md-8">
-        <div class="article_content"><%= @article.content %></div>
+        <div class="content"><%= @article.content %></div>
       </div>
       <div class="col-md-4">
         <%= image_tag @article.upload.url(:medium), :id => "article_image_show_view" %>
@@ -20,7 +20,7 @@
   <% else %>
     <div class="row">
       <div class="col-md-12">
-        <div class="article_content"><%= @article.content %></div>
+        <div class="content"><%= @article.content %></div>
       </div>
     </div>
   <% end %>
