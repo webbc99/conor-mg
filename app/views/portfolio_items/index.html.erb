@@ -7,8 +7,8 @@
   <div class="row">
     <div class="card-deck">
       <% @portfolio_items.each do |portfolio_item| %>
-        <div class="col-md-4">
-          <div class="card">
+        <div class="col-md-12 col-lg-4">
+          <div class="card portfolio-card mb-5">
             <%= image_tag portfolio_item.upload.url(:medium), :class => 'card-img-top portfolio_index_image' %>
             <div class="card-body">
               <h5 class="card-title"><%= link_to portfolio_item.title, portfolio_item_path(portfolio_item), :class => 'text-dark' %></h5>
