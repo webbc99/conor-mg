@@ -7,11 +7,13 @@
   <div class="row">
     <div class="card-deck">
       <% @portfolio_items.each do |portfolio_item| %>
-        <div class="card">
-          <%= image_tag portfolio_item.upload.url(:medium), :class => 'card-img-top portfolio_index_image' %>
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to portfolio_item.title, portfolio_item_path(portfolio_item), :class => 'text-dark' %></h5>
-            <p class="card-text"><%= truncate(portfolio_item.content, length: 350) %></p>
+        <div class="col-md-4">
+          <div class="card">
+            <%= image_tag portfolio_item.upload.url(:medium), :class => 'card-img-top portfolio_index_image' %>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to portfolio_item.title, portfolio_item_path(portfolio_item), :class => 'text-dark' %></h5>
+              <p class="card-text"><%= truncate(portfolio_item.content, length: 350) %></p>
+            </div>
           </div>
         </div>
       <% end %>
