@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, :skip => [:registrations]
   devise_for :views
   resources :articles do

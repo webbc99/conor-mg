@@ -2,3 +2,12 @@
   object-fit: cover;
   height: 250px;
 }
+
+.portfolio_content {
+  white-space: normal !important;
+}
+
+.portfolio_content img {
+  max-width: 100%;
+  height: auto;
+}

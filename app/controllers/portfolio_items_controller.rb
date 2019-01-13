@@ -66,7 +66,7 @@ class PortfolioItemsController < ApplicationController
   end
 
   def portfolio_item_params
-    params.require(:portfolio_item).permit(:title, :content, :upload)
+    params.require(:portfolio_item).permit(:title, :content, :upload, :summary)
   end
 
 end

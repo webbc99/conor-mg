@@ -8,22 +8,11 @@
   </div>
 </div>
 <div class="container">
-  <% if @portfolio_item.upload_file_name %>
-    <div class="row">
-      <div class="col-md-8">
-        <div class="content"><%= @portfolio_item.content %></div>
-      </div>
-      <div class="col-md-4">
-        <%= image_tag @portfolio_item.upload.url(:medium), :id => "portfolio_item_image_show_view" %>
-      </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="content portfolio_content"><%= @portfolio_item.content.html_safe %></div>
     </div>
-  <% else %>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="content"><%= @portfolio_item.content %></div>
-      </div>
-    </div>
-  <% end %>
+  </div>
   <div class="row">
     <div class="col-md-12">
       <hr>

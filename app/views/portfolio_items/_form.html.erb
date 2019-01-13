@@ -17,11 +17,16 @@
 
   <div class="field form-group">
     <%= form.label :content %>
-    <%= form.text_area :content, id: :portfolio_item_content, :class => "form-control" %>
+    <%= form.cktext_area :content, id: :portfolio_item_content, :class => "form-control", ckeditor: { language: 'en-gb' } %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :upload %>
+    <%= form.label :summary %>
+    <%= form.text_area :summary, id: :portfolio_item_summary, :class => "form-control", maxlength: 350 %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :upload, "Summary Image" %>
     <%= form.file_field :upload, :required => true %>
   </div>
 

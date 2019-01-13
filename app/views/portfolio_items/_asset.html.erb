@@ -1,0 +1,8 @@
+<%= form_with(model: asset_url, local: true, multipart: true) do |form| %>
+
+  <div class="field form-group">
+    <%= form.label :upload %>
+    <%= form.file_field :upload, :required => true %>
+  </div>
+
+<% end %>

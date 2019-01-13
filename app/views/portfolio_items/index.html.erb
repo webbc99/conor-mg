@@ -12,7 +12,9 @@
             <%= image_tag portfolio_item.upload.url(:medium), :class => 'card-img-top portfolio_index_image' %>
             <div class="card-body">
               <h5 class="card-title"><%= link_to portfolio_item.title, portfolio_item_path(portfolio_item), :class => 'text-dark' %></h5>
-              <p class="card-text"><%= truncate(portfolio_item.content, length: 350) %></p>
+              <% unless portfolio_item.summary.nil? %>
+                <p class="card-text"><%= truncate(portfolio_item.summary, length: 350) %></p>
+              <% end %>
             </div>
           </div>
         </div>

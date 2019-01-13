@@ -41,6 +41,8 @@ gem 'aws-sdk', '< 3.0'
 gem 'paperclip', '~> 5.3.0'
 # Use figaro for env variables
 gem 'figaro'
+# Use ckeditor for WYSIWYG post editing
+gem 'ckeditor'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
