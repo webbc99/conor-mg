@@ -1,9 +1,19 @@
 <div class="jumbotron jumbotron-small">
   <div class="container">
     <div class="row">
-      <div class="col-xl-6">
-        <h1 class="display-3 text-light"><%= @article.title %></h1>
-      </div>
+      <% if @article.title.length > 70 %>
+        <div class="col-xl-7">
+          <h1 class="display-5 text-light"><%= @article.title %></h1>
+        </div>
+      <% elsif @article.title.length > 35 %>
+        <div class="col-xl-7">
+          <h1 class="display-4 text-light"><%= @article.title %></h1>
+        </div>
+      <% else %>
+        <div class="col-xl-7">
+          <h1 class="display-3 text-light"><%= @article.title %></h1>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
