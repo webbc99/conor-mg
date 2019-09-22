@@ -6,9 +6,9 @@ class WelcomeController < ApplicationController
 
   def download_cv
     send_file(
-      "#{Rails.root}/public/conor_mg_cv.docx",
-      filename: "conor_mg_cv.docx",
-      type: "application/docx"
+      "#{Rails.root}/public/conor_mg_cv.pdf",
+      filename: "conor_mg_cv.pdf",
+      type: "application/pdf"
       )
   end
 end

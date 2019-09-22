@@ -31,10 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Use Bootstrap for styling
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use devise for users
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 # Use amazon s3 for image hostijng
 gem 'aws-sdk', '< 3.0'
 # Use paperclip for file management
